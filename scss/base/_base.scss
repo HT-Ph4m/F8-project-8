@@ -10,3 +10,20 @@ body {
     font-size: 1.6rem;
     font-family: Gordita, "sans-serif";
 }
+
+button, input, select, textarea {
+    font-size: inherit;
+    font-family: inherit;
+}
+
+button {
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
