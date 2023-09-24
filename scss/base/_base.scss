@@ -9,10 +9,12 @@ html {
 body {
     font-size: 1.6rem;
     font-family: Gordita, "sans-serif";
+    color: var(--text-color);
 }
 
 button, input, select, textarea {
     font-size: inherit;
+    color: inherit;
     font-family: inherit;
 }
 
@@ -27,3 +29,7 @@ a {
     text-decoration: none;
 }
 
+
+.icon {
+    filter: var(--icon-color);
+}
