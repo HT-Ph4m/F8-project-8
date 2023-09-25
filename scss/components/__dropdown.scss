@@ -1,0 +1,108 @@
+.dropdown {
+    position: absolute;
+    width: min(1240px, 100%);
+    left: 0;
+    padding-top: 54px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+
+    &__inner {
+        --inner-padding: 30px;
+
+        position: relative;
+        max-height: var(--inner-max-height);
+        padding: var(--inner-padding);
+        border-radius: 20px;
+        background-color: var(--dropdown-bg-color);
+        box-shadow: 0px 40px 90px 20px var(--dropdown-shadow-color);
+
+        &::before {
+            position: absolute;
+            content: url("../icons/dropdown-arrow.svg");
+            top: -13px;
+            left: var(--arrow-left-pos);
+            transform: translateX(-50%);
+            filter: var(--dropdown-arrow-color);
+        }
+    }
+}
+
+.top-menu {
+    --main-column-width: 292px;
+    position: relative;
+    &__main {
+        height: 100%;
+        width: var(--main-column-width);
+        max-height: calc(min(582px, 100vh - 158px) - var(--inner-padding) * 2);
+        border-right: 1px solid var(--top-menu-border-color);
+        overflow: auto;
+    }
+}
+
+.menu-column {
+    display: flex;
+    gap: 14px;
+    &__icon {
+        position: relative;
+        width: 36px;
+        height: 36px;
+        flex-shrink: 0;
+    }
+
+    &__content {
+        flex: 1;
+    }
+
+    &__icon-1 {
+        width: 30px;
+        height: 30px;
+        object-fit: cover;
+    }
+
+    &__icon-2 {
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        object-fit: cover;
+        bottom: 0;
+        right: 0;
+        filter: var(--menu-item-icon-color);
+    }
+
+    &__heading {
+        font-size: 1.6rem;
+        font-weight: 500;
+        line-height: 36px;
+    }
+
+    &__list {
+        margin-top: 13px;
+    }
+
+    &__item:hover > &__link {
+        color: #0071dc;
+        font-weight: 500;
+    }
+
+    &__item:hover > .sub-menu {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    &__link {
+        display: block;
+        padding: 7px 0;
+        font-size: 1.4;
+        line-height: 1.42;
+    }
+}
+
+.sub-menu {
+    opacity: 0;
+    visibility: hidden;
+    padding-left: var(--inner-padding);
+    position: absolute;
+    inset: 0 0 0 var(--main-column-width);
+    background-color: transparent;
+}
