@@ -1234,8 +1234,7 @@ html {
   margin-top: 3px;
 }
 .navbar__item:hover > .dropdown {
-  opacity: 1;
-  visibility: visible;
+  display: block;
 }
 
 .top-act {
@@ -1335,9 +1334,7 @@ html {
   width: min(1240px, 100%);
   left: 0;
   padding-top: 54px;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.2s ease, visibility 0.2s ease;
+  display: none;
 }
 .dropdown__inner {
   --inner-padding: 30px;
@@ -1366,12 +1363,15 @@ html {
   width: var(--main-column-width);
   max-height: calc(min(582px, 100vh - 158px) - var(--inner-padding) * 2);
   border-right: 1px solid var(--top-menu-border-color);
-  overflow: auto;
+  overflow-y: auto;
 }
 
 .menu-column {
   display: flex;
   gap: 14px;
+}
+.menu-column + .menu-column {
+  margin-top: 22px;
 }
 .menu-column__icon {
   position: relative;
@@ -1379,19 +1379,24 @@ html {
   height: 36px;
   flex-shrink: 0;
 }
+@media (max-width: 1199.8px) {
+  .menu-column__icon {
+    display: none;
+  }
+}
 .menu-column__content {
   flex: 1;
 }
 .menu-column__icon-1 {
   width: 30px;
   height: 30px;
-  object-fit: cover;
+  object-fit: contain;
 }
 .menu-column__icon-2 {
   position: absolute;
   width: 24px;
   height: 24px;
-  object-fit: cover;
+  object-fit: contain;
   bottom: 0;
   right: 0;
   filter: var(--menu-item-icon-color);
@@ -1399,33 +1404,31 @@ html {
 .menu-column__heading {
   font-size: 1.6rem;
   font-weight: 500;
-  line-height: 36px;
+  line-height: 30px;
 }
 .menu-column__list {
-  margin-top: 13px;
+  margin-top: 12px;
 }
-.menu-column__item:hover > .menu-column__link {
+.menu-column__item--active .sub-menu {
+  display: flex;
+}
+.menu-column__item--active > .menu-column__link, .menu-column__item:hover > .menu-column__link {
   color: #0071dc;
   font-weight: 500;
-}
-.menu-column__item:hover > .sub-menu {
-  opacity: 1;
-  visibility: visible;
 }
 .menu-column__link {
   display: block;
   padding: 7px 0;
-  font-size: 1.4;
-  line-height: 1.42;
+  font-size: 1.4rem;
+  line-height: 1.41;
 }
 
 .sub-menu {
-  opacity: 0;
-  visibility: hidden;
+  display: none;
   padding-left: var(--inner-padding);
   position: absolute;
   inset: 0 0 0 var(--main-column-width);
-  background-color: transparent;
+  overflow-y: auto;
 }
 
 /*# sourceMappingURL=main.css.map */
