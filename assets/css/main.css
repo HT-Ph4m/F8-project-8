@@ -1430,5 +1430,12 @@ html {
   inset: 0 0 0 var(--main-column-width);
   overflow-y: auto;
 }
+.sub-menu--not-main {
+  max-height: calc(min(582px, 100vh - 158px) - var(--inner-padding) * 2);
+  display: flex;
+  position: initial;
+  inset: initial;
+  padding-left: 0;
+}
 
 /*# sourceMappingURL=main.css.map */
