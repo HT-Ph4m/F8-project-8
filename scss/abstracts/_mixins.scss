@@ -12,7 +12,7 @@ $grid-breakpoints: (
         $key: $key,
     );
     @if ($breakpoint) {
-        @media (max-width: ($breakpoint - 0.2)) {
+        @media (max-width: ($breakpoint - 0.02)) {
             @content;
         }
     } @else {
