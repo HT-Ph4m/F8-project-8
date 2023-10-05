@@ -6,7 +6,7 @@
     padding-top: 54px;
     display: none;
 
-    @include abstracts.breakpoint(lg) {
+    @include abstracts.screen(lg) {
         position: initial;
         padding-top: 0;
     }
@@ -30,7 +30,7 @@
             filter: var(--dropdown-arrow-color);
         }
 
-        @include abstracts.breakpoint(lg) {
+        @include abstracts.screen(lg) {
             display: block;
             background: transparent;
             box-shadow: none;
@@ -41,7 +41,11 @@
             }
         }
 
-        @include abstracts.breakpoint(lg) {
+        @include abstracts.screen(md) {
+            padding: 0 40px;
+        }
+
+        @include abstracts.screen(sm) {
             padding: 0 20px;
         }
     }
@@ -58,7 +62,7 @@
         border-right: 1px solid var(--top-menu-border-color);
         overflow-y: auto;
 
-        @include abstracts.breakpoint(lg) {
+        @include abstracts.screen(lg) {
             width: 100%;
             height: auto;
             border-right: none;
@@ -74,7 +78,7 @@
         margin-top: 22px;
     }
 
-    @include abstracts.breakpoint(lg) {
+    @include abstracts.screen(lg) {
         margin-top: 10px;
         width: 100%;
     }
@@ -85,10 +89,10 @@
         height: 36px;
         flex-shrink: 0;
 
-        @include abstracts.breakpoint(xl) {
+        @include abstracts.screen(xl) {
             display: none;
         }
-        @include abstracts.breakpoint(lg) {
+        @include abstracts.screen(lg) {
             display: block;
         }
     }
@@ -118,7 +122,7 @@
         font-weight: 500;
         line-height: 30px;
 
-        @include abstracts.breakpoint(lg) {
+        @include abstracts.screen(lg) {
             display: block;
             padding-bottom: 12px;
         }
@@ -127,7 +131,7 @@
     &__list {
         margin-top: 12px;
 
-        @include abstracts.breakpoint(lg) {
+        @include abstracts.screen(lg) {
             margin-top: 0;
         }
     }
@@ -159,7 +163,7 @@
     inset: 0 0 0 var(--main-column-width);
     overflow-y: auto;
 
-    @include abstracts.breakpoint(lg) {
+    @include abstracts.screen(lg) {
         position: initial;
         padding-left: 0;
         max-width: 100%;
@@ -172,7 +176,7 @@
         inset: initial;
         padding-left: 0;
 
-        @include abstracts.breakpoint(lg) {
+        @include abstracts.screen(lg) {
             height: auto;
         }
     }
