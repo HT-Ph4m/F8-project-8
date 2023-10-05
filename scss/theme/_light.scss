@@ -2,8 +2,8 @@
 
 html {
     --text-color: #1a162e;
-    --icon-color: brightness(0) saturate(100%) invert(8%) sepia(15%) saturate(2317%) hue-rotate(210deg) brightness(98%)
-        contrast(96%);
+    --icon-color: brightness(0) saturate(100%) invert(8%) sepia(15%)
+        saturate(2317%) hue-rotate(210deg) brightness(98%) contrast(96%);
 
     // Header Color
     --header-bg-color: #eee;
@@ -20,11 +20,11 @@ html {
     // Dropdown color
     --dropdown-bg-color: #fff;
     --dropdown-shadow-color: rgba(200, 200, 200, 0.4);
-    --dropdown-arrow-color: brightness(0) saturate(100%) invert(91%) sepia(100%) saturate(38%) hue-rotate(284deg)
-        brightness(109%) contrast(111%);
+    --dropdown-arrow-color: brightness(0) saturate(100%) invert(91%) sepia(100%)
+        saturate(38%) hue-rotate(284deg) brightness(109%) contrast(111%);
     --top-menu-border-color: #d2d1d6;
-    --menu-item-icon-color: brightness(0) saturate(100%) invert(8%) sepia(15%) saturate(2317%) hue-rotate(210deg)
-        brightness(98%) contrast(96%);
+    --menu-item-icon-color: brightness(0) saturate(100%) invert(8%) sepia(15%)
+        saturate(2317%) hue-rotate(210deg) brightness(98%) contrast(96%);
 
     // sidebar
     --sidebar-bg: #fff;
@@ -39,4 +39,17 @@ html {
     @include abstracts.screen(md) {
         --cate-item-background: #fff;
     }
+
+    // btn
+    --filter-btn-color: #6c6c72;
+    --filter-btn-bg-color: #fff;
+    --like-btn-shadow: rgba(124, 124, 124, 0.2);
+
+    // product card
+    --product-card-bg: #fff;
+    --product-card-shadow: rgba(237, 237, 246, 0.2);
+    --like-btn-bg: #fff;
+    --product-card-title-color: #1a162e;
+    --product-card-branch-color: #9e9da8;
+    --product-card-price-color: #1a162e;
 }

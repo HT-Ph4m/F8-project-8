@@ -26,4 +26,9 @@
             --grid-gutter-y: 20px;
         }
     }
+
+    &__row {
+        align-items: start;
+        justify-content: space-between;
+    }
 }
