@@ -27,14 +27,14 @@
 
 <body>
     <!-- Header -->
-    <section id="header" class="header"></section>
+    <div id="header" class="header"></div>
     <script>
         load("#header", "./templates/header.html");
     </script>
 
     <div class="container">
 
-        <section class="home__container">
+        <div class="home__container">
             <!-- SlideShow -->
             <div class="slideshow">
                 <div class="slideshow__inner">
@@ -55,38 +55,44 @@
                     <div class="slideshow__num">5</div>
                 </div>
             </div>
-        </section>
+        </div>
 
         <!-- Browse categories -->
         <section class="home__container">
             <h2 class="home__heading">Browse Categories</h2>
             <div class="home__cate row row-cols-3 row-cols-md-1">
                 <div class="col">
-                    <div class="cate-item">
-                        <img src="./assets/images/browse-cate/item-1.png" alt="" class="cate-item__thumb">
-                        <section class="cate-item__info">
-                            <h3 class="cate-item__title">$24 - $150</h3>
-                            <p class="cate-item__desc">New sumatra mandeling coffe blend</p>
-                        </section>
-                    </div>
+                    <a href="#!" class="">
+                        <article class="cate-item">
+                            <img src="./assets/images/browse-cate/item-1.png" alt="" class="cate-item__thumb">
+                            <div class="cate-item__info">
+                                <h3 class="cate-item__title">$24 - $150</h3>
+                                <p class="cate-item__desc">New sumatra mandeling coffe blend</p>
+                            </div>
+                        </article>
+                    </a>
                 </div>
                 <div class="col">
-                    <div class="cate-item">
-                        <img src="./assets/images/browse-cate/item-2.png" alt="" class="cate-item__thumb">
-                        <section class="cate-item__info">
-                            <h3 class="cate-item__title">$37 - $160</h3>
-                            <p class="cate-item__desc">Espresso arabica and robusta beans</p>
-                        </section>
-                    </div>
+                    <a href="#!">
+                        <article class="cate-item">
+                            <img src="./assets/images/browse-cate/item-2.png" alt="" class="cate-item__thumb">
+                            <div class="cate-item__info">
+                                <h3 class="cate-item__title">$37 - $160</h3>
+                                <p class="cate-item__desc">Espresso arabica and robusta beans</p>
+                            </div>
+                        </article>
+                    </a>
                 </div>
                 <div class="col">
-                    <div class="cate-item">
-                        <img src="./assets/images/browse-cate/item-3.png" alt="" class="cate-item__thumb">
-                        <section class="cate-item__info">
-                            <h3 class="cate-item__title">$32 - $160</h3>
-                            <p class="cate-item__desc">Lavazza top class whole bean coffee blend</p>
-                        </section>
-                    </div>
+                    <a href="#!" class="">
+                        <article class="cate-item">
+                            <img src="./assets/images/browse-cate/item-3.png" alt="" class="cate-item__thumb">
+                            <div class="cate-item__info">
+                                <h3 class="cate-item__title">$32 - $160</h3>
+                                <p class="cate-item__desc">Lavazza top class whole bean coffee blend</p>
+                            </div>
+                        </article>
+                    </a>
                 </div>
             </div>
         </section>
@@ -95,23 +101,57 @@
         <section class="home__container">
             <div class="row home__row">
                 <h2 class="home__heading">Total LavAzza 1320</h2>
-                <button class="filter-btn">
-                    Filter
-                    <img src="./assets/icons/filter.svg" alt="" class="icon filter-btn__icon">
-                </button>
+                <div class="filter-wrap">
+                    <button class="filter-btn">
+                        Filter
+                        <img src="./assets/icons/filter.svg" alt="" class="icon filter-btn__icon">
+                    </button>
+                    <div class="filter">
+                        <h3 class="filter__heading">Filter</h3>
+                        <form action="" class="filter__form">
+                            <div class="filter__row">
+                                <!-- filter col 1 -->
+                                <div class="filter__col">
+                                    <label for="" class="filter__heading filter__form-label">Price</label>
+                                    <div class="filter__form-group">
+                                        <div class="filter__form-slider" style="--min-value:10%; --max-value:60%"></div>
+                                    </div>
+                                    <div class="filter__form-group filter__form-group--inline">
+                                        <div class="">
+                                            <label for="priceMin"
+                                                class="filter__form-label filter__form-label--small">Minimum</label>
+                                            <input type="text" value="$30.00" name="priceMin" id="priceMin" readonly
+                                                class="filter__form--input">
+                                        </div>
+                                        <div class="">
+                                            <label for="priceMax"
+                                                class="filter__form-label filter__form-label--small">Maximum</label>
+                                            <input type="text" value="$100.00" name="priceMax" id="priceMax" readonly
+                                                class="filter__form--input">
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- filter col 2 -->
+                                <div class="filter__col"></div>
+                                <!-- filter col 3 -->
+                                <div class="filter__col"></div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </div>
 
-            <div class="row row-cols-4 row-cols-lg-2 row-cols-sm-1">
+            <div class="row row-cols-4 row-cols-lg-2 row-cols-sm-1 g-3">
                 <!-- item 1 -->
                 <div class="col">
                     <article class="product-card">
                         <div class="product-card__img-wrap">
                             <a href="#!" class="product-card__link">
-                                <img src="./assets/images/home-product/image - UIHUT.png" alt=""
-                                    class="product-card__thumb">
+                                <img src="./assets/images/home-product/image-01.png" alt="" class="product-card__thumb">
                             </a>
                             <button class="like-btn like-btn--liked  product-card__like-btn product-card__like-btn">
                                 <img src="./assets/icons/heart.svg" alt="" class="icon like-btn__icon">
+                                <img src="./assets/icons/heart-red.svg" alt="" class="like-btn__icon--liked">
                             </button>
                         </div>
                         <h3 class="product-card__title">
@@ -130,11 +170,11 @@
                     <article class="product-card">
                         <div class="product-card__img-wrap">
                             <a href="#!" class="product-card__link">
-                                <img src="./assets/images/home-product/image - UIHUT-02.png" alt=""
-                                    class="product-card__thumb">
+                                <img src="./assets/images/home-product/image-02.png" alt="" class="product-card__thumb">
                             </a>
-                            <button class="like-btn like-btn--liked  product-card__like-btn">
+                            <button class="like-btn product-card__like-btn">
                                 <img src="./assets/icons/heart.svg" alt="" class="icon like-btn__icon">
+                                <img src="./assets/icons/heart-red.svg" alt="" class="like-btn__icon--liked">
                             </button>
                         </div>
                         <h3 class="product-card__title">
@@ -153,11 +193,12 @@
                     <article class="product-card">
                         <div class="product-card__img-wrap">
                             <a href="#!" class="product-card__link">
-                                <img src="./assets/images/home-product/image - UIHUT-03.png" alt=""
-                                    class="product-card__thumb">
+                                <img src="./assets/images/home-product/image-03.png" alt="" class="product-card__thumb">
                             </a>
-                            <button class="like-btn like-btn--liked  product-card__like-btn">
+                            <button class="like-btn product-card__like-btn">
                                 <img src="./assets/icons/heart.svg" alt="" class="icon like-btn__icon">
+
+                                <img src="./assets/icons/heart-red.svg" alt="" class="like-btn__icon--liked">
                             </button>
                         </div>
                         <h3 class="product-card__title">
@@ -176,11 +217,11 @@
                     <article class="product-card">
                         <div class="product-card__img-wrap">
                             <a href="#!" class="product-card__link">
-                                <img src="./assets/images/home-product/image - UIHUT-04.png" alt=""
-                                    class="product-card__thumb">
+                                <img src="./assets/images/home-product/image-04.png" alt="" class="product-card__thumb">
                             </a>
                             <button class="like-btn like-btn--liked  product-card__like-btn">
                                 <img src="./assets/icons/heart.svg" alt="" class="icon like-btn__icon">
+                                <img src="./assets/icons/heart-red.svg" alt="" class="like-btn__icon--liked">
                             </button>
                         </div>
                         <h3 class="product-card__title">
@@ -198,7 +239,7 @@
         </section>
 
         <!-- Footer -->
-        <section id="footer"></section>
+        <div id="footer"></div>
         <script>
             load("#footer", "./templates/footer.html");
         </script>

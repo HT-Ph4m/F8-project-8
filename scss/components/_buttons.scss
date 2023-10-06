@@ -4,7 +4,6 @@
     display: flex;
     align-items: center;
     gap: 14px;
-    margin-right: 15px;
     height: 36px;
     color: var(--filter-btn-color);
     border-radius: 6px;
@@ -24,4 +23,16 @@
     width: 50px;
     height: 50px;
     border-radius: 50%;
+
+    &:not(&--liked) &__icon--liked {
+        display: none;
+    }
+
+    &--liked &__icon {
+        display: none;
+    }
+
+    &__icon--liked {
+        margin-top: 8px;
+    }
 }

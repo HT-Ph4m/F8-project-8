@@ -78,6 +78,7 @@ textarea {
   color: inherit;
   font-family: inherit;
   -webkit-tap-highlight-color: transparent;
+  outline: none;
 }
 
 button {
@@ -95,6 +96,12 @@ a {
 
 .icon {
   filter: var(--icon-color);
+}
+
+@media (max-width: 575.98px) {
+  .container {
+    padding: 0 20px !important;
+  }
 }
 
 .row > *, .container-fluid, .container {
@@ -1220,8 +1227,8 @@ a {
 }
 html.dark {
   --text-color: #fff;
-  --icon-color: brightness(0) saturate(100%) invert(100%) sepia(0%)
-      saturate(7500%) hue-rotate(292deg) brightness(109%) contrast(103%);
+  --icon-color: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7500%) hue-rotate(292deg)
+      brightness(109%) contrast(103%);
   --header-bg-color: #171c28;
   --body-bg-color: #292e39;
   --top-act-group-bg-color: #292e39;
@@ -1229,11 +1236,11 @@ html.dark {
   --top-act-group-separate: #ededf6;
   --dropdown-bg-color: #2f3441;
   --dropdown-shadow-color: rgba(23, 28, 40, 0.4);
-  --dropdown-arrow-color: brightness(0) saturate(100%) invert(18%) sepia(6%)
-      saturate(1793%) hue-rotate(186deg) brightness(97%) contrast(91%);
+  --dropdown-arrow-color: brightness(0) saturate(100%) invert(18%) sepia(6%) saturate(1793%) hue-rotate(186deg)
+      brightness(97%) contrast(91%);
   --top-menu-border-color: #171c28;
-  --menu-item-icon-color: brightness(0) saturate(100%) invert(99%) sepia(10%)
-      saturate(604%) hue-rotate(245deg) brightness(102%) contrast(95%);
+  --menu-item-icon-color: brightness(0) saturate(100%) invert(99%) sepia(10%) saturate(604%) hue-rotate(245deg)
+      brightness(102%) contrast(95%);
   --sidebar-bg: #292e39;
   --sidebar-shadow: rgba(23, 28, 40, 0.4);
   --cate-item-background: #171c28;
@@ -1243,6 +1250,10 @@ html.dark {
   --filter-btn-color: #fff;
   --filter-btn-bg-color: #171c28;
   --like-btn-shadow: rgba(0, 0, 0, 0.2);
+  --filter-bg-color: #292e39;
+  --filter-box-shadow: rgba(0, 0, 0, 0.4);
+  --filter-heading-color: #fff;
+  --filter-slider-bg: #d2d1d6;
   --product-card-bg: #171c28;
   --product-card-shadow: rgba(0, 0, 0, 0.2);
   --like-btn-bg: #292e39;
@@ -1258,8 +1269,8 @@ html.dark {
 
 html {
   --text-color: #1a162e;
-  --icon-color: brightness(0) saturate(100%) invert(8%) sepia(15%)
-      saturate(2317%) hue-rotate(210deg) brightness(98%) contrast(96%);
+  --icon-color: brightness(0) saturate(100%) invert(8%) sepia(15%) saturate(2317%) hue-rotate(210deg) brightness(98%)
+      contrast(96%);
   --header-bg-color: #eee;
   --body-bg-color: #f6f6f6;
   --top-act-group-bg-color: #fff;
@@ -1267,11 +1278,11 @@ html {
   --top-act-group-separate: #ededf6;
   --dropdown-bg-color: #fff;
   --dropdown-shadow-color: rgba(200, 200, 200, 0.4);
-  --dropdown-arrow-color: brightness(0) saturate(100%) invert(91%) sepia(100%)
-      saturate(38%) hue-rotate(284deg) brightness(109%) contrast(111%);
+  --dropdown-arrow-color: brightness(0) saturate(100%) invert(91%) sepia(100%) saturate(38%) hue-rotate(284deg)
+      brightness(109%) contrast(111%);
   --top-menu-border-color: #d2d1d6;
-  --menu-item-icon-color: brightness(0) saturate(100%) invert(8%) sepia(15%)
-      saturate(2317%) hue-rotate(210deg) brightness(98%) contrast(96%);
+  --menu-item-icon-color: brightness(0) saturate(100%) invert(8%) sepia(15%) saturate(2317%) hue-rotate(210deg)
+      brightness(98%) contrast(96%);
   --sidebar-bg: #fff;
   --sidebar-shadow: rgba(200, 200, 200, 0.4);
   --cate-item-background: #eee;
@@ -1280,7 +1291,11 @@ html {
   --cate-item-desc-color: #1a162e;
   --filter-btn-color: #6c6c72;
   --filter-btn-bg-color: #fff;
-  --like-btn-shadow: rgba(124, 124, 124, 0.2);
+  --like-btn-shadow: rgba(200, 200, 200, 0.4);
+  --filter-bg-color: #fff;
+  --filter-box-shadow: rgba(0, 0, 0, 0.4);
+  --filter-heading-color: #1a162e;
+  --filter-slider-bg: #d2d1d6;
   --product-card-bg: #fff;
   --product-card-shadow: rgba(237, 237, 246, 0.2);
   --like-btn-bg: #fff;
@@ -1901,7 +1916,6 @@ html {
   display: flex;
   align-items: center;
   gap: 14px;
-  margin-right: 15px;
   height: 36px;
   color: var(--filter-btn-color);
   border-radius: 6px;
@@ -1921,6 +1935,15 @@ html {
   width: 50px;
   height: 50px;
   border-radius: 50%;
+}
+.like-btn:not(.like-btn--liked) .like-btn__icon--liked {
+  display: none;
+}
+.like-btn--liked .like-btn__icon {
+  display: none;
+}
+.like-btn__icon--liked {
+  margin-top: 8px;
 }
 
 .product-card {
@@ -1981,6 +2004,82 @@ html {
   line-height: 150%;
 }
 
+.filter-wrap {
+  position: relative;
+  z-index: 1;
+}
+
+.filter {
+  position: absolute;
+  right: 0;
+  top: 50px;
+  border-radius: 20px;
+  padding: 30px;
+  background-color: var(--filter-bg-color);
+  filter: drop-shadow(0px 40px 90px var(--filter-box-shadow));
+}
+.filter__row {
+  display: flex;
+}
+.filter__form {
+  margin-top: 30px;
+}
+.filter__form-label {
+  display: block;
+}
+.filter__form-label--small {
+  font-size: 1.4rem;
+  line-height: 143%;
+  margin-bottom: 10px;
+}
+.filter__form-group {
+  margin-top: 20px;
+}
+.filter__form-group--inline {
+  display: flex;
+  gap: 30px;
+}
+.filter__form-slider {
+  position: relative;
+  width: 100%;
+  height: 2px;
+  background: var(--filter-slider-bg);
+}
+.filter__form-slider::before, .filter__form-slider::after {
+  content: "";
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 6px solid #ffb700;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: var(--filter-bg-color);
+}
+.filter__form-slider::before {
+  left: var(--min-value);
+}
+.filter__form-slider::after {
+  left: var(--max-value);
+}
+.filter__form--input {
+  width: 121px;
+  border-radius: 6px;
+  border: 1px solid #d2d1d6;
+  color: var(--secondary-color-secondary-1, #1a162e);
+  font-size: 1.4rem;
+  padding: 0 12px;
+  height: 36px;
+  font-weight: 500;
+  line-height: 142.857%;
+}
+.filter__heading {
+  color: var(--filter-heading-color);
+  font-size: 2.2rem;
+  font-weight: 500;
+  line-height: 145.455%;
+}
+
 .home__container {
   margin-top: 40px;
 }
@@ -2009,6 +2108,7 @@ html {
   }
 }
 .home__row {
+  padding-right: 15px;
   align-items: start;
   justify-content: space-between;
 }

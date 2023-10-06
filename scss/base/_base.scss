@@ -1,3 +1,5 @@
+@use "../abstracts";
+
 *,
 ::after,
 ::before {
@@ -23,6 +25,7 @@ textarea {
     color: inherit;
     font-family: inherit;
     -webkit-tap-highlight-color: transparent;
+    outline: none;
 }
 
 button {
@@ -40,4 +43,10 @@ a {
 
 .icon {
     filter: var(--icon-color);
+}
+
+.container {
+    @include abstracts.screen(sm) {
+        padding: 0 20px !important;
+    }
 }
