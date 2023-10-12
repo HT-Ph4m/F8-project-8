@@ -41,7 +41,7 @@ html.dark {
     --like-btn-shadow: rgba(0, 0, 0, 0.2);
 
     // filter
-    --filter-bg-color: #292e39;
+    --filter-bg-color: #2f3441;
     --filter-box-shadow: rgba(0, 0, 0, 0.4);
     --filter-heading-color: #fff;
     --filter-slider-bg: #d2d1d6;
@@ -49,6 +49,7 @@ html.dark {
     --filter-input-color: #fff;
     --filter-button-color: #9e9da8;
     --filter-button-bg-color: #171c28;
+    --filter-form-arrow-color: var(--dropdown-arrow-color);
 
     // product card
     --product-card-bg: #171c28;
@@ -57,4 +58,15 @@ html.dark {
     --product-card-title-color: #fff;
     --product-card-branch-color: #9e9da8;
     --product-card-price-color: #fff;
+
+    // footer
+    --footer-text-color: #9e9da8;
+
+    // auth
+    --auth-intro-bg-color: #171c28;
+    --auth-content-bg-color: #292e39;
+    --auth-heading-color: #b9babe;
+
+    // forms
+    --forms-border-color: #b9babe;
 }

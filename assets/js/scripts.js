@@ -148,7 +148,8 @@ function handleActiveMenu() {
  */
 window.addEventListener("template-loaded", initJsToggle);
 
-function initJsToggle() {
+function initJsToggle(e) {
+    e.preventDefault();
     $$(".js-toggle").forEach((button) => {
         const target = button.getAttribute("toggle-target");
         if (!target) {
@@ -164,6 +165,14 @@ function initJsToggle() {
                 $(target).classList.toggle("hide", !isHidden);
                 $(target).classList.toggle("show", isHidden);
             });
+        };
+        document.onclick = function (e) {
+            if (!e.target.closest(target)) {
+                const isHidden = $(target).classList.contains("hide");
+                if (!isHidden) {
+                    button.click();
+                }
+            }
         };
     });
 }

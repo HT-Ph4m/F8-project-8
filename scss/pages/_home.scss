@@ -31,5 +31,9 @@
         padding-right: 15px;
         align-items: start;
         justify-content: space-between;
+        flex-wrap: nowrap;
+    }
+
+    &__product--row + &__product--row {
     }
 }

@@ -1,0 +1,63 @@
+@use "../abstracts";
+.auth {
+    min-height: 100vh;
+    display: flex;
+
+    &__intro,
+    &__content {
+        flex: 1;
+        display: flex;
+        align-items: center;
+    }
+
+    &__intro {
+        gap: 50px;
+        background-color: var(--auth-intro-bg-color);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        &-text {
+            max-width: 412px;
+            font-size: 1.8rem;
+            font-weight: 500;
+            line-height: 144.444%;
+            text-align: center;
+        }
+    }
+
+    &__content {
+        background-color: var(--auth-content-bg-color);
+
+        &-inner {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            margin: 0 auto;
+            width: min(460px, 100%);
+        }
+    }
+    &__heading {
+        margin-top: 5rem;
+        font-size: 30px;
+        font-weight: 500;
+        line-height: 146.667%;
+        color: var(--auth-heading-color);
+    }
+
+    &__desc {
+        width: min(400px, 100%);
+        margin-top: 10px;
+        font-size: 1.5rem;
+        font-weight: 500;
+        line-height: 146.667%;
+        color: var(--auth-desc-color);
+    }
+
+    &__form {
+        width: 100%;
+        margin-top: 30px;
+    }
+}
