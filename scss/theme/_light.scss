@@ -36,10 +36,6 @@ html {
     --cate-item-title-color: #000;
     --cate-item-desc-color: #1a162e;
 
-    @include abstracts.screen(md) {
-        --cate-item-background: #fff;
-    }
-
     // btn
     --filter-btn-color: #6c6c72;
     --filter-btn-bg-color: #fff;
@@ -68,10 +64,17 @@ html {
 
     // auth
     --auth-intro-bg-color: #fafafd;
+    --auth-intro-text-color: #1a162e;
     --auth-content-bg-color: #fff;
     --auth-heading-color: #1a162e;
     --auth-desc-color: #9e9da8;
 
     // forms
     --forms-border-color: #d2d1d6;
+    --forms-checkbox-color: #9e9da8;
+
+    @include abstracts.screen(md) {
+        --cate-item-background: #fff;
+        --auth-intro-bg-color: #fff;
+    }
 }
