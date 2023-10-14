@@ -1292,6 +1292,10 @@ html.dark {
   --auth-heading-color: #b9babe;
   --forms-border-color: #b9babe;
   --forms-checkbox-color: #b9babe;
+  --product-detail-bg: #292e39;
+  --breadcrumbs-bg: #171c28;
+  --breadcrumbs-shadow: rgba(23, 28, 40, 0.2);
+  --breadcrumbs-text-color: #9e9da8;
 }
 @media (max-width: 991.98px) {
   html.dark {
@@ -1346,6 +1350,10 @@ html {
   --auth-desc-color: #9e9da8;
   --forms-border-color: #d2d1d6;
   --forms-checkbox-color: #9e9da8;
+  --product-detail-bg: #fff;
+  --breadcrumbs-bg: #f6f6f6;
+  --breadcrumbs-shadow: rgba(237, 237, 246, 0.2);
+  --breadcrumbs-text-color: #9e9da8;
 }
 @media (max-width: 991.98px) {
   html {
@@ -2666,6 +2674,41 @@ html {
   transform: rotate(135deg);
 }
 
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  min-height: 64px;
+  padding: 20px;
+  border-radius: 10px;
+  background: var(--breadcrumbs-bg);
+  box-shadow: 0px 20px 60px 10px var(--breadcrumbs-shadow);
+}
+@media (max-width: 767.98px) {
+  .breadcrumbs {
+    gap: 16px;
+  }
+}
+.breadcrumbs__link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--breadcrumbs-text-color);
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 150%;
+  white-space: nowrap;
+}
+.breadcrumbs__link--current {
+  color: inherit;
+}
+@media (max-width: 767.98px) {
+  .breadcrumbs__link {
+    font-size: 1.4rem;
+  }
+}
+
 .home__container {
   margin-top: 40px;
 }
@@ -2865,6 +2908,60 @@ html {
   .auth__logo {
     margin-left: 0;
   }
+}
+
+.product-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 80vh;
+  background-color: var(--product-detail-bg);
+}
+
+.product-container {
+  margin-top: 30px;
+}
+
+.prod-preview__list {
+  display: flex;
+  overflow: hidden;
+}
+.prod-preview__item {
+  position: relative;
+  width: 100%;
+  flex-shrink: 0;
+  padding-top: 92%;
+}
+.prod-preview__img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  top: 0;
+  left: 0;
+}
+.prod-preview__thumbs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+.prod-preview__thumbs-img {
+  border: 1.5px solid rgba(158, 157, 168, 0.3);
+  border-radius: 10px;
+  width: 65px;
+  height: 65px;
+  object-fit: contain;
+  cursor: pointer;
+  opacity: 0.9;
+  transition: opacity 0.3s, border-color 0.3s;
+}
+.prod-preview__thumbs-img:hover {
+  opacity: 1;
+  border-color: #9e9da8;
+}
+.prod-preview__thumbs-img--current {
+  opacity: 1;
+  border-color: #3ef2ff;
 }
 
 /*# sourceMappingURL=main.css.map */

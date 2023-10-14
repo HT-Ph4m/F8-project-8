@@ -73,6 +73,14 @@ html {
     --forms-border-color: #d2d1d6;
     --forms-checkbox-color: #9e9da8;
 
+    // product detail
+    --product-detail-bg: #fff;
+
+    // breadcrumbs
+    --breadcrumbs-bg: #f6f6f6;
+    --breadcrumbs-shadow: rgba(237, 237, 246, 0.2);
+    --breadcrumbs-text-color: #9e9da8;
+
     @include abstracts.screen(md) {
         --cate-item-background: #fff;
         --auth-intro-bg-color: #fff;
