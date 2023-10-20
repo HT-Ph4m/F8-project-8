@@ -32,7 +32,8 @@
         load("#header", "./templates/header.html");
     </script>
 
-    <main class="container">
+    <!-- Main -->
+    <main class="container home">
 
         <div class="home__container">
             <!-- SlideShow -->
@@ -109,24 +110,22 @@
                     <div id="home-filter" class="filter hide">
                         <img src="./assets/icons/arrow-up.png" alt="" class="filter__arrow">
                         <h3 class="filter__heading">Filter</h3>
-                        <form action="" class="filter__form">
+                        <form action="" class="filter__form form">
                             <div class="filter__row filter__content">
                                 <!-- filter col 1 -->
                                 <div class="filter__col">
-                                    <label for="" class="filter__form-label">Price</label>
+                                    <label for="" class="form__label">Price</label>
                                     <div class="filter__form-group">
                                         <div class="filter__form-slider" style="--min-value:10%; --max-value:60%"></div>
                                     </div>
                                     <div class="filter__form-group filter__form-group--inline">
                                         <div class="">
-                                            <label for="priceMin"
-                                                class="filter__form-label filter__form-label--small">Minimum</label>
+                                            <label for="priceMin" class="form__label form__label--small">Minimum</label>
                                             <input type="text" value="$30.00" name="priceMin" id="priceMin"
                                                 class="filter__form--input">
                                         </div>
                                         <div class="">
-                                            <label for="priceMax"
-                                                class="filter__form-label filter__form-label--small">Maximum</label>
+                                            <label for="priceMax" class="form__label form__label--small">Maximum</label>
                                             <input type="text" value="$100.00" name="priceMax" id="priceMax"
                                                 class="filter__form--input">
                                         </div>
@@ -135,29 +134,29 @@
                                 <div class="filter__separate"></div>
                                 <!-- filter col 2 -->
                                 <div class="filter__col">
-                                    <label for="" class="filter__form-label">Size/Weight</label>
-                                    <div class="filter__form-group filter__form-select--group">
-                                        <div class="filter__form-select--wrap">
-                                            <div class="filter__form-select">500g
+                                    <label for="" class="form__label">Size/Weight</label>
+                                    <div class="filter__form-group form__select--group">
+                                        <div class="form__select--wrap">
+                                            <div class="form__select">500g
                                                 <img src="./assets/icons/filter-arrow-down.svg" alt=""
-                                                    class="icon filter__form-select-arrow">
+                                                    class="icon form__select-arrow">
                                             </div>
-                                            <div class="filter__form-select">Gram
+                                            <div class="form__select">Gram
                                                 <img src="./assets/icons/filter-arrow-down.svg" alt=""
-                                                    class="icon filter__form-select-arrow">
+                                                    class="icon form__select-arrow">
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="filter__form-tags">
-                                        <button class="filter__form-tag">Small</button>
-                                        <button class="filter__form-tag">Medium</button>
-                                        <button class="filter__form-tag">Large</button>
+                                    <div class="form__tags">
+                                        <button class="form__tag">Small</button>
+                                        <button class="form__tag">Medium</button>
+                                        <button class="form__tag">Large</button>
                                     </div>
                                 </div>
                                 <div class="filter__separate"></div>
                                 <!-- filter col 3 -->
                                 <div class="filter__col">
-                                    <label for="" class="filter__form-label">Brand</label>
+                                    <label for="" class="form__label">Brand</label>
                                     <div class="filter__form-group filter__form-search-group">
                                         <div class="filter__form-text-input">
                                             <input type="text" class="filter__form-input" name=""
@@ -167,10 +166,10 @@
                                         </div>
                                     </div>
                                     <div class="filter__form-group filter__form-search-group">
-                                        <div class="filter__form-tags">
-                                            <button class="filter__form-tag">Lavazza</button>
-                                            <button class="filter__form-tag">Nescafe</button>
-                                            <button class="filter__form-tag">Starbucks</button>
+                                        <div class="form__tags">
+                                            <button class="form__tag">Lavazza</button>
+                                            <button class="form__tag">Nescafe</button>
+                                            <button class="form__tag">Starbucks</button>
                                         </div>
                                     </div>
                                 </div>
@@ -567,6 +566,7 @@
             </div>
         </section>
     </main>
+
     <!-- Footer -->
     <footer id="footer" class="footer"></footer>
     <script>

@@ -30,6 +30,25 @@
         }
     }
 
+    &__label {
+        color: var(--form-heading-color);
+        align-items: center;
+        font-size: 2.2rem;
+        font-weight: 500;
+        line-height: 145.455%;
+        display: block;
+
+        &--small {
+            font-size: 1.4rem;
+            line-height: 143%;
+            margin-bottom: 10px;
+
+            @include abstracts.screen(sm) {
+                width: 100%;
+            }
+        }
+    }
+
     &__text-input {
         display: flex;
         align-items: center;
@@ -128,6 +147,79 @@
             border-top: 2px solid var(--forms-checkbox-color);
             border-right: 2px solid var(--forms-checkbox-color);
             transform: rotate(135deg);
+        }
+    }
+
+    &__select--wrap {
+        border-radius: 6px;
+        border: 1px solid #d2d1d6;
+        color: var(--filter-input-color);
+        background-color: transparent;
+        font-size: 1.4rem;
+        line-height: 142.857%;
+        font-weight: 500;
+        display: flex;
+        padding: 5px 0;
+        align-items: center;
+        height: 45px;
+        cursor: pointer;
+    }
+
+    &__select {
+        display: flex;
+        column-gap: 65px;
+        padding: 0 14px;
+
+        &--group {
+            margin-top: 20px;
+        }
+    }
+
+    &__select:first-child {
+        border-right: 1px solid #eee;
+
+        @include abstracts.screen(xl) {
+            width: 100%;
+            justify-content: space-between;
+        }
+
+        @include abstracts.screen(sm) {
+            column-gap: 60px;
+        }
+    }
+    &__select:last-child {
+        column-gap: 17px;
+        @include abstracts.screen(xl) {
+            width: 50%;
+            justify-content: space-between;
+        }
+    }
+
+    &__tags {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        column-gap: 20px;
+        row-gap: 10px;
+        margin-top: 20px;
+
+        @include abstracts.screen(sm) {
+            column-gap: 9px;
+        }
+    }
+    &__tag {
+        border-radius: 6px;
+        background-color: transparent;
+        font-size: 1.4rem;
+        line-height: 142.857%;
+        font-weight: 500;
+        padding: 6px 12px;
+        color: var(--form-button-color);
+        background-color: var(--form-button-bg-color);
+        transform: color 0.2s;
+
+        &:hover {
+            color: var(--text-color);
         }
     }
 }
