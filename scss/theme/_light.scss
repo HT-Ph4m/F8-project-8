@@ -88,6 +88,9 @@ html {
     // search bar
     --search-bar-background: #fff;
 
+    // Preview
+    --review-card-bg: #fafafd;
+
     @include abstracts.screen(md) {
         --prod-tag-bg: #ededf6;
         --cate-item-background: #fff;

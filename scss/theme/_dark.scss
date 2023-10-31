@@ -87,6 +87,9 @@ html.dark {
     // search bar
     --search-bar-background: #171c28;
 
+    // Preview
+    --review-card-bg: #171c28;
+
     @include abstracts.screen(md) {
         --prod-tag-bg: #292e39;
         --prod-info-container-bg: #171c28;

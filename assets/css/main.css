@@ -110,6 +110,16 @@ a {
   }
 }
 
+i,
+em {
+  font-style: italic;
+}
+
+b,
+strong {
+  font-weight: 600;
+}
+
 .row > *, .container-fluid, .container {
   padding-left: calc(var(--grid-gutter-x) * 0.5);
   padding-right: calc(var(--grid-gutter-x) * 0.5);
@@ -1301,6 +1311,7 @@ html.dark {
   --breadcrumbs-shadow: rgba(23, 28, 40, 0.2);
   --breadcrumbs-text-color: #9e9da8;
   --search-bar-background: #171c28;
+  --review-card-bg: #171c28;
 }
 @media (max-width: 991.98px) {
   html.dark {
@@ -1371,6 +1382,7 @@ html {
   --breadcrumbs-shadow: rgba(237, 237, 246, 0.2);
   --breadcrumbs-text-color: #9e9da8;
   --search-bar-background: #fff;
+  --review-card-bg: #fafafd;
 }
 @media (max-width: 991.98px) {
   html {
@@ -2768,6 +2780,133 @@ html {
   padding: 0 15px;
 }
 
+.review-card {
+  padding: 30px;
+  border-radius: 16px;
+  color: inherit;
+  background-color: var(--review-card-bg);
+}
+.review-card__content {
+  display: flex;
+  gap: 20px;
+}
+@media (max-width: 1199.98px) {
+  .review-card__content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+.review-card__avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.review-card__title {
+  font-size: 2.2rem;
+  font-weight: 500;
+  line-height: 145.455%;
+}
+.review-card__desc {
+  margin-top: 10px;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 150%;
+}
+.review-card__rating {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+@media (max-width: 767.98px) {
+  .review-card__rating {
+    justify-content: center;
+  }
+}
+.review-card__rating-title {
+  margin-left: 12px;
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 144.444%;
+}
+
+.text-content {
+  font-size: 1.6rem;
+  line-height: 1.6;
+}
+.text-content h1,
+.text-content h2,
+.text-content h3,
+.text-content h4,
+.text-content h5,
+.text-content h6 {
+  font-weight: 600;
+}
+.text-content h1 {
+  font-size: 2.6rem;
+}
+.text-content h2 {
+  font-size: 2.2rem;
+}
+.text-content h3 {
+  font-size: 1.8rem;
+}
+.text-content h4 {
+  font-size: 1.6rem;
+}
+.text-content h5 {
+  font-size: 1.4rem;
+}
+.text-content h6 {
+  font-size: 1.2rem;
+}
+.text-content h1,
+.text-content h2,
+.text-content h3,
+.text-content h4,
+.text-content h5,
+.text-content h6,
+.text-content img,
+.text-content figure,
+.text-content p,
+.text-content blockquote,
+.text-content ul,
+.text-content ol,
+.text-content table {
+  margin: 20px 0;
+}
+.text-content img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: min(100%, 500px);
+}
+.text-content img + em {
+  display: block;
+  font-style: italic;
+  text-align: center;
+}
+.text-content a {
+  color: #5ebfff;
+  text-decoration: underline;
+}
+.text-content blockquote {
+  padding: 20px;
+  background-color: rgba(202, 202, 202, 0.2);
+  border-left: 2px solid #0f4fff;
+}
+.text-content blockquote p {
+  margin: 0;
+}
+.text-content hr {
+  border: none;
+  height: 1px;
+  margin: 50px 0;
+  background: #ebebeb;
+}
+
 .home {
   padding-bottom: 50px;
 }
@@ -3050,12 +3189,12 @@ html {
   width: 65px;
   height: 65px;
   object-fit: contain;
-  cursor: pointer;
   opacity: 0.9;
   transition: opacity 0.3s, border-color 0.3s;
 }
-.prod-preview__thumbs-img:hover {
+.prod-preview__thumbs-img:not(.prod-preview__thumbs-img--current):hover {
   opacity: 1;
+  cursor: pointer;
   border-color: #9e9da8;
 }
 .prod-preview__thumbs-img--current {
@@ -3202,6 +3341,46 @@ html {
   .prod-props {
     padding-left: 0;
   }
+}
+
+.prod-tab__list {
+  display: flex;
+  column-gap: 60px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.prod-tab__item {
+  padding: 7px 20px;
+  color: #9e9da8;
+  font-size: 2.2rem;
+  font-weight: 500;
+  line-height: 145.455%;
+  cursor: pointer;
+  user-select: none;
+}
+@media (max-width: 767.98px) {
+  .prod-tab__item {
+    font-size: 1.8rem;
+  }
+}
+.prod-tab__item--current {
+  color: inherit;
+}
+.prod-tab__contents {
+  padding-top: 30px;
+}
+.prod-tab__content {
+  display: none;
+}
+.prod-tab__content--current {
+  display: block;
+}
+
+.prop-content__heading {
+  padding-bottom: 30px;
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 141.667%;
 }
 
 /*# sourceMappingURL=main.css.map */
