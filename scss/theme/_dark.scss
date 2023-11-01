@@ -89,6 +89,14 @@ html.dark {
 
     // Preview
     --review-card-bg: #171c28;
+    --tex-content-hr-color: rgba(172, 172, 172, 0.5);
+
+    // --act-dropdown
+    --act-dropdown-bg: #292e39;
+    --act-dropdown-shadow: rgba(23, 28, 40, 0.4);
+    --act-dropdown-color: #b9babe;
+    --act-dropdown-border-color: #171c28;
+    --act-dropdown-arrow-color: var(--act-dropdown-bg);
 
     @include abstracts.screen(md) {
         --prod-tag-bg: #292e39;
