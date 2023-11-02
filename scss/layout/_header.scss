@@ -294,6 +294,10 @@
     display: none;
     padding-top: 30px;
 
+    &__favorite {
+        right: -110px;
+    }
+
     &__inner {
         position: relative;
         padding: 20px;
@@ -308,6 +312,10 @@
         right: 90px;
         height: 20.5px;
         filter: var(--act-dropdown-arrow-color);
+
+        &--favorite {
+            right: 130px;
+        }
     }
 
     &__top {
@@ -331,7 +339,6 @@
     &__bottom {
         padding: 20px 0;
         border-top: 1px solid var(--act-dropdown-border-color);
-        border-bottom: 1px solid var(--act-dropdown-border-color);
     }
     &__row {
         display: flex;
@@ -360,9 +367,10 @@
     }
 
     &__checkout {
-        margin-top: 20px;
+        padding-top: 20px;
         display: flex;
         justify-content: flex-end;
+        border-top: 1px solid var(--act-dropdown-border-color);
 
         &-btn {
             min-width: 210px;

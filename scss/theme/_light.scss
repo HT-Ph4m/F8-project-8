@@ -99,6 +99,13 @@ html {
     --act-dropdown-border-color: #d2d1d6;
     --act-dropdown-arrow-color: var(--act-dropdown-bg);
 
+    // checkout page
+    --checkout-page-bg: #fff;
+    --checkout-page-cart-shadow: rgba(237, 237, 246, 0.2);
+    --checkout-page-gift-bg: linear-gradient(0deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 100%), #7644e1;
+    --checkout-page-gift-shadow: 0px 20px 60px 10px rgba(237, 237, 246, 0.2);
+    --cart-item-border-color: #d2d1d6;
+
     @include abstracts.screen(md) {
         --prod-tag-bg: #ededf6;
         --cate-item-background: #fff;

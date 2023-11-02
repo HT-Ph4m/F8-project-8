@@ -10,6 +10,10 @@
 
 .product-container {
     margin-top: 30px;
+
+    @include abstracts.screen(md) {
+        margin-top: 20px;
+    }
 }
 
 .prod-info-container {

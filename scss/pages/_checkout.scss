@@ -1,0 +1,292 @@
+@use "../abstracts";
+
+.checkout-page {
+    padding-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    min-height: 80vh;
+    color: var(--checkout-page-color);
+
+    &__breadcrumbs {
+        background-color: var(--checkout-page-bg);
+    }
+}
+
+.checkout-container {
+    margin-top: 30px;
+
+    @include abstracts.screen(md) {
+        margin-top: 20px;
+    }
+}
+
+.cart-info {
+    padding: 0 30px 30px;
+    background-color: var(--checkout-page-bg);
+    border-radius: 20px;
+    box-shadow: 0px 20px 60px 10px var(--checkout-page-cart-shadow);
+
+    @include abstracts.screen(md) {
+        padding: 0 20px 20px;
+    }
+
+    &__list {
+    }
+
+    &__sub-label {
+        font-weight: 400;
+    }
+
+    &__right {
+        padding-top: 30px;
+
+        @include abstracts.screen(xl) {
+            margin-top: 30px;
+        }
+    }
+
+    &__right + &__right {
+        margin-top: 30px;
+    }
+
+    &__bottom {
+        margin-top: 30px;
+    }
+
+    &__next-btn {
+        margin-top: 30px;
+
+        @include abstracts.screen(xl) {
+            margin-left: auto;
+            margin-right: auto;
+            width: min(360px, 100%);
+        }
+    }
+
+    &__continue {
+        height: 100%;
+        display: flex;
+        &-link {
+            gap: 10px;
+            align-self: flex-end;
+            display: flex;
+            align-items: center;
+            font-size: 1.8rem;
+            font-weight: 500;
+            line-height: 144.444%;
+        }
+
+        &-icon {
+            rotate: 90deg;
+        }
+    }
+
+    &__row {
+        display: flex;
+        justify-content: space-between;
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 144.444%;
+
+        &--bold {
+            font-size: 2.2rem;
+            font-weight: 700;
+            line-height: 145.455%;
+        }
+    }
+
+    &__row + &__row {
+        margin-top: 10px;
+    }
+
+    &__separate {
+        margin: 30px 0;
+        height: 1px;
+        background: var(--cart-item-border-color);
+    }
+}
+
+.cart-item {
+    padding: 30px 0;
+    display: flex;
+    gap: 30px;
+    border-bottom: 1px solid var(--cart-item-border-color);
+
+    @include abstracts.screen(xxl) {
+        gap: 20px;
+    }
+
+    @include abstracts.screen(md) {
+        gap: 16px;
+        padding: 20px 0;
+    }
+
+    &:last-child {
+        @include abstracts.screen(md) {
+            border: none;
+        }
+    }
+
+    &__thumb {
+        width: 172px;
+        height: 172px;
+        object-fit: contain;
+
+        @include abstracts.screen(xl) {
+            width: 150px;
+            height: 150px;
+        }
+
+        @include abstracts.screen(lg) {
+            width: 100px;
+            height: 100px;
+        }
+
+        @include abstracts.screen(sm) {
+            width: 60px;
+            height: 60px;
+        }
+    }
+
+    &__content {
+        flex: 1;
+        display: flex;
+
+        @include abstracts.screen(md) {
+            flex-direction: column;
+        }
+
+        &-left {
+            flex: 1;
+        }
+
+        &-right {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+
+            @include abstracts.screen(md) {
+                margin-top: 16px;
+                align-items: flex-start;
+            }
+        }
+    }
+
+    &__title {
+        max-width: 360px;
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 144.444%;
+    }
+
+    &__price-wrap {
+        margin-top: 26px;
+        color: #9e9da8;
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 144.444%;
+    }
+
+    &__status {
+        color: #67b044;
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 144.444%;
+    }
+
+    &__ctrl {
+        margin-top: 16px;
+        display: flex;
+        gap: 20px;
+        align-items: center;
+
+        @include abstracts.screen(sm) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        &-bottom {
+            gap: 30px;
+            margin-top: 98px;
+
+            @include abstracts.screen(xxl) {
+                gap: 20px;
+            }
+
+            @include abstracts.screen(md) {
+                margin-top: 16px;
+                display: flex;
+                flex-direction: row;
+            }
+        }
+    }
+
+    &__input {
+        padding: 10px 20px;
+        display: flex;
+        gap: 10px;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 1.5rem;
+        font-weight: 500;
+        border-radius: 10px;
+        border: 1px solid #d2d1d6;
+    }
+
+    &__input-btn {
+        display: flex;
+        align-items: center;
+    }
+
+    &__total-price {
+        font-size: 2.2rem;
+        font-weight: 700;
+        line-height: 145.455%;
+    }
+
+    &__ctrl-btn {
+        display: flex;
+        color: #9e9da8;
+        gap: 10px;
+        font-size: 1.6rem;
+        font-weight: 500;
+        line-height: 150%;
+    }
+}
+
+.gift-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    &__icon-wrap {
+        display: flex;
+        flex-shrink: 0;
+        justify-content: center;
+        align-items: center;
+        width: 76px;
+        height: 76px;
+        border-radius: 14px;
+        background: var(--checkout-page-gift-bg);
+        box-shadow: var(--checkout-page-gift-shadow);
+    }
+
+    &__icon {
+        width: 56px;
+        height: 56px;
+        display: block;
+    }
+
+    &__title {
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 144.444%;
+    }
+
+    &__desc {
+        font-size: 1.4rem;
+        font-weight: 400;
+        line-height: 142.857%;
+        margin-top: 10px;
+    }
+}
