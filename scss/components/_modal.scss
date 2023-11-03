@@ -5,7 +5,7 @@
     inset: 0;
 }
 
-.dialog {
+.modal {
     @extend %fill-screen;
     z-index: 99;
     display: flex;
@@ -16,6 +16,16 @@
     visibility: hidden;
     transition: opacity, visibility;
     transition-duration: 0.2s;
+
+    &__body {
+        max-height: calc(100vh - 150px);
+        overflow-y: auto;
+    }
+
+    &__heading {
+        font-size: 1.8rem;
+        font-weight: 700;
+    }
 
     &.show {
         opacity: 1;
@@ -28,13 +38,27 @@
     }
 
     &__content {
-        width: min(450px, calc(100% - 40px));
+        width: min(var(--modal-width, 800px), calc(100% - 40px));
         position: relative;
         z-index: 1;
         padding: 20px 30px;
         border-radius: 20px;
         background: var(--breadcrumbs-bg);
         box-shadow: 0px 20px 60px 10px var(--breadcrumbs-shadow);
+    }
+
+    &--small &__content {
+        --modal-width: 400px;
+    }
+
+    &--large &__content {
+        --modal-width: 1100px;
+    }
+
+    &--fill &__content {
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
     }
 
     &__text {
@@ -61,6 +85,20 @@
         &__btn {
             flex: 1;
             margin-left: 0 !important;
+        }
+    }
+
+    &__close {
+        font-size: 3rem;
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 5px 20px;
+        z-index: 2;
+        opacity: 0.7;
+
+        &:hover {
+            opacity: 1;
         }
     }
 }
