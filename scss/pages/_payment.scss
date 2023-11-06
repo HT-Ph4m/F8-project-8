@@ -11,7 +11,10 @@
         line-height: 144.444%;
         padding: 0;
     }
-    &__edit-btn {
+    &__separate {
+        @include abstracts.screen(md) {
+            margin: 20px 0;
+        }
     }
 }
 
@@ -22,26 +25,47 @@
     padding: 20px;
     margin-top: 30px;
     border-radius: 20px;
-    background: #f6f6f6;
+    background: var(--payment-item-bg-color);
+
+    @include abstracts.screen(md) {
+        padding: 16px;
+        margin-top: 20px;
+    }
+
+    &__pointer {
+        cursor: pointer;
+    }
+
+    &__thumb {
+        width: 70px;
+        height: 53px;
+        object-fit: cover;
+    }
 
     &__content {
+        margin-left: 20px;
         flex: 1;
     }
 
     &__title {
-        margin-top: 4px;
         font-size: 1.8rem;
         font-weight: 500;
         line-height: 144.444%;
     }
 
-    &__detail,
     &__desc {
+        margin-top: 4px;
         font-size: 1.5rem;
         line-height: 146.667%;
+
+        &--low {
+            color: #9e9da8;
+        }
     }
 
     &__detail {
+        font-size: 1.5rem;
+        line-height: 146.667%;
         color: #0071dc;
     }
 
@@ -52,10 +76,9 @@
         font-size: 1.8rem;
         color: #9e9da8;
         font-weight: 500;
-        line-height: 144.444%;
 
         &:has(:checked) {
-            color: #1a162e;
+            color: var(--payment-item-checked) #1a162e;
         }
     }
 }

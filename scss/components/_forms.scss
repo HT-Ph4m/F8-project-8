@@ -70,6 +70,17 @@
                 width: 100%;
             }
         }
+
+        &--medium {
+            font-size: 1.8rem;
+            line-height: 144.444%;
+            margin-bottom: 20px;
+
+            @include abstracts.screen(md) {
+                margin-bottom: 10px;
+                margin-top: 20px;
+            }
+        }
     }
 
     &__text-area,
@@ -296,7 +307,7 @@
             height: 19px;
             width: 19px;
             border-radius: 5px;
-            border: 1.5px solid var(--forms-checkbox-color);
+            border: 1px solid var(--forms-checkbox-color);
         }
     }
 

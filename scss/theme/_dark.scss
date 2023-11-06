@@ -110,6 +110,10 @@ html.dark {
     --checkout-page-gift-shadow: transparent;
     --cart-item-border-color: #292e39;
 
+    // payment item
+    --payment-item-bg-color: #292e39;
+    --payment-item-checked: #b9babe;
+
     @include abstracts.screen(md) {
         --prod-tag-bg: #292e39;
         --prod-info-container-bg: #171c28;

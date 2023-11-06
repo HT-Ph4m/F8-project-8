@@ -110,6 +110,10 @@ html {
     --checkout-page-gift-shadow: 0px 20px 60px 10px rgba(237, 237, 246, 0.2);
     --cart-item-border-color: #d2d1d6;
 
+    // payment item
+    --payment-item-bg-color: #f6f6f6;
+    --payment-item-checked: #1a162e;
+
     @include abstracts.screen(md) {
         --prod-tag-bg: #ededf6;
         --cate-item-background: #fff;
@@ -119,5 +123,6 @@ html {
         --prod-info-bg: #fff;
         --prod-info-container-bg: #fff;
         --review-card-bg: #fff;
+        --payment-item-bg-color: #fafafd;
     }
 }
