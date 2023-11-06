@@ -1,0 +1,61 @@
+@use "../abstracts";
+
+.payment {
+    &__heading {
+        font-size: 2.2rem;
+        padding: 0;
+    }
+
+    &__sub-heading {
+        font-size: 1.8rem;
+        line-height: 144.444%;
+        padding: 0;
+    }
+    &__edit-btn {
+    }
+}
+
+.payment-item {
+    display: flex;
+    align-items: center;
+
+    padding: 20px;
+    margin-top: 30px;
+    border-radius: 20px;
+    background: #f6f6f6;
+
+    &__content {
+        flex: 1;
+    }
+
+    &__title {
+        margin-top: 4px;
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 144.444%;
+    }
+
+    &__detail,
+    &__desc {
+        font-size: 1.5rem;
+        line-height: 146.667%;
+    }
+
+    &__detail {
+        color: #0071dc;
+    }
+
+    &__checkbox {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        font-size: 1.8rem;
+        color: #9e9da8;
+        font-weight: 500;
+        line-height: 144.444%;
+
+        &:has(:checked) {
+            color: #1a162e;
+        }
+    }
+}

@@ -71,6 +71,10 @@ html.dark {
     // forms
     --forms-border-color: #b9babe;
     --forms-checkbox-color: #b9babe;
+    --forms-select-dialog-shadow: rgba($color: #292e39, $alpha: 0.15);
+    --forms-select-dialog-bg: #292e39;
+    --forms-select-dialog-text-hover-color: #dfdfdf;
+    --forms-select-dialog-text-hover-bg: #9e9da8;
 
     // product detail
     --product-detail-bg: #292e39;

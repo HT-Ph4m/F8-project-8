@@ -72,6 +72,10 @@ html {
     // forms
     --forms-border-color: #d2d1d6;
     --forms-checkbox-color: #9e9da8;
+    --forms-select-dialog-shadow: rgba($color: #000000, $alpha: 0.15);
+    --forms-select-dialog-bg: #fff;
+    --forms-select-dialog-text-hover-color: #292e39;
+    --forms-select-dialog-text-hover-bg: #ebebeb;
 
     // product detail
     --product-detail-bg: #fff;

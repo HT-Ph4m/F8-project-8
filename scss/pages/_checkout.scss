@@ -21,6 +21,14 @@
 }
 
 .cart-info {
+    & + & {
+        margin-top: 30px;
+    }
+
+    &__top {
+        padding-top: 20px;
+    }
+
     padding: 0 30px 30px;
     background-color: var(--checkout-page-bg);
     border-radius: 20px;
@@ -28,6 +36,12 @@
 
     @include abstracts.screen(md) {
         padding: 0 20px 20px;
+    }
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 
     &__heading {
