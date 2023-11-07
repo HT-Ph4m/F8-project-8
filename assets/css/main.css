@@ -3984,6 +3984,9 @@ html {
 .cart-info__checkbox-input {
   appearance: none;
 }
+.cart-info__checkbox-input:not(:checked)::before {
+  filter: var(--icon-color);
+}
 .cart-info__checkbox-input::before {
   content: url("../../assets/icons/checkbox-uncheck.svg");
 }
@@ -4281,12 +4284,22 @@ html {
   margin-top: 30px;
   border-radius: 20px;
   background: var(--payment-item-bg-color);
+  gap: 20px;
 }
 @media (max-width: 767.98px) {
   .payment-item {
     padding: 16px;
     margin-top: 20px;
   }
+}
+@media (max-width: 575.98px) {
+  .payment-item {
+    gap: 16px;
+    align-items: flex-start;
+  }
+}
+.payment-item__center {
+  align-items: center;
 }
 .payment-item__pointer {
   cursor: pointer;
@@ -4296,8 +4309,18 @@ html {
   height: 53px;
   object-fit: cover;
 }
+.payment-item__wrap {
+  flex: 1;
+  display: flex;
+  gap: 20px;
+}
+@media (max-width: 575.98px) {
+  .payment-item__wrap {
+    flex-direction: column;
+    gap: 16px;
+  }
+}
 .payment-item__content {
-  margin-left: 20px;
   flex: 1;
 }
 .payment-item__title {
@@ -4328,6 +4351,11 @@ html {
 }
 .payment-item__checkbox:has(:checked) {
   color: var(--payment-item-checked) #1a162e;
+}
+@media (max-width: 575.98px) {
+  .payment-item__checkbox {
+    gap: 8px;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
