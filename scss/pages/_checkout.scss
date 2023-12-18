@@ -25,6 +25,12 @@
         margin-top: 30px;
     }
 
+    &__btn-checkout {
+        @include abstracts.screen(md) {
+            width: 100%;
+        }
+    }
+
     &__form--wrap {
         margin: 30px 0;
         border-radius: 10px;
@@ -99,7 +105,11 @@
     }
 
     &__bottom {
-        margin-top: 30px;
+        padding-top: 30px;
+
+        @include abstracts.screen(md) {
+            border-top: 1px solid var(--forms-border-color);
+        }
     }
 
     &__next-btn {
@@ -147,6 +157,14 @@
 
         @include abstracts.screen(md) {
             flex-direction: row;
+        }
+
+        &-md--block {
+            @include abstracts.screen(md) {
+                flex-direction: column;
+                align-items: start;
+                row-gap: 30px;
+            }
         }
     }
 
@@ -198,6 +216,10 @@
     &__cta {
         display: flex;
         justify-content: flex-end;
+
+        @include abstracts.screen(md) {
+            width: 100%;
+        }
     }
 
     &__check-all {
@@ -208,16 +230,23 @@
 .cart-item {
     padding: 30px 0;
     display: flex;
-    gap: 30px;
     border-bottom: 1px solid var(--cart-item-border-color);
 
     @include abstracts.screen(xxl) {
-        gap: 20px;
     }
 
     @include abstracts.screen(md) {
-        gap: 16px;
         padding: 20px 0;
+    }
+
+    &__checkout-btn {
+        @include abstracts.screen(md) {
+            width: 200px;
+        }
+
+        @include abstracts.screen(sm) {
+            width: 150px;
+        }
     }
 
     &:last-child {
@@ -229,6 +258,7 @@
     &__thumb {
         width: 172px;
         height: 172px;
+        margin: 0 30px 0 20px;
         object-fit: contain;
 
         @include abstracts.screen(xl) {
@@ -237,6 +267,7 @@
         }
 
         @include abstracts.screen(lg) {
+            margin: 0 20px 0 16px;
             width: 100px;
             height: 100px;
         }
@@ -304,8 +335,26 @@
             align-items: flex-start;
         }
 
-        &-bottom {
+        &--wrap {
+            display: flex;
             gap: 30px;
+
+            @include abstracts.screen(xl) {
+                gap: 20px;
+            }
+
+            @include abstracts.screen(md) {
+                flex-direction: column;
+                align-items: start;
+            }
+        }
+
+        &-md {
+            margin-top: 0;
+        }
+
+        &-bottom {
+            gap: 25px;
             margin-top: 98px;
 
             @include abstracts.screen(xxl) {
@@ -316,6 +365,27 @@
                 margin-top: 16px;
                 display: flex;
                 flex-direction: row;
+            }
+
+            &--md {
+                margin-top: 88px;
+
+                @include abstracts.screen(lg) {
+                    margin-top: auto;
+                }
+
+                @include abstracts.screen(md) {
+                    margin-top: 20px;
+                }
+            }
+        }
+
+        &--md-block {
+            gap: 25px;
+
+            @include abstracts.screen(lg) {
+                flex-direction: column;
+                align-items: start;
             }
         }
     }
