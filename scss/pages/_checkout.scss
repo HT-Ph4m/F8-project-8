@@ -72,6 +72,13 @@
         line-height: 141.667%;
     }
 
+    &__desc {
+        margin-top: 6px;
+        font-size: 1.5rem;
+        font-weight: 400;
+        line-height: 146.667%;
+    }
+
     &__list {
     }
 
@@ -191,6 +198,10 @@
     &__cta {
         display: flex;
         justify-content: flex-end;
+    }
+
+    &__check-all {
+        margin: 15px 0;
     }
 }
 
