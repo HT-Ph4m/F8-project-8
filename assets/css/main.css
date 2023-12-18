@@ -3923,7 +3923,7 @@ html {
 }
 @media (max-width: 767.98px) {
   .cart-info__bottom {
-    border-top: 1px solid var(--forms-border-color);
+    border-top: 1px solid var(--cart-item-border-color);
   }
 }
 .cart-info__next-btn {
