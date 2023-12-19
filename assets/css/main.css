@@ -1336,6 +1336,7 @@ html.dark {
   --profile-user-box-shadow-color: rgba(23, 28, 40, 0.2);
   --account-info-bg-color: #292e39;
   --account-icon-bg-color: #171c28;
+  --profile-menu-hover: #363636;
 }
 @media (max-width: 991.98px) {
   html.dark {
@@ -1429,6 +1430,7 @@ html {
   --profile-user-box-shadow-color: rgba(237, 237, 246, 0.2);
   --account-info-bg-color: #f6f6f6;
   --account-icon-bg-color: #fff;
+  --profile-menu-hover: #e4e4e4;
 }
 @media (max-width: 991.98px) {
   html {
@@ -4161,6 +4163,9 @@ html {
 .cart-info__check-all {
   margin: 15px 0;
 }
+.cart-info__back-arrow {
+  padding-right: 10px;
+}
 
 .cart-item {
   padding: 30px 0;
@@ -4639,7 +4644,7 @@ html {
   flex-direction: column;
 }
 .profile-menu__list li:hover {
-  background-color: #e4e4e4;
+  background-color: var(--profile-menu-hover);
   border-radius: 10px;
 }
 .profile-menu__link {
@@ -4698,6 +4703,15 @@ html {
   height: 1px;
   background: #d2d1d6;
   margin: 20px 0;
+}
+
+.form-card__label {
+  margin-bottom: 10px;
+}
+.form-card__bottom {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 30px;
 }
 
 /*# sourceMappingURL=main.css.map */

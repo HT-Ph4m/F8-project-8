@@ -79,7 +79,7 @@
         flex-direction: column;
 
         & li:hover {
-            background-color: #e4e4e4;
+            background-color: var(--profile-menu-hover);
             border-radius: 10px;
         }
     }

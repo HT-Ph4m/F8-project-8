@@ -122,6 +122,7 @@ html.dark {
     --profile-user-box-shadow-color: rgba(23, 28, 40, 0.2);
     --account-info-bg-color: #292e39;
     --account-icon-bg-color: #171c28;
+    --profile-menu-hover: #363636;
 
     @include abstracts.screen(md) {
         --prod-tag-bg: #292e39;
