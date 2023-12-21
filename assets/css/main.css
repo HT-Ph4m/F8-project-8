@@ -1705,7 +1705,7 @@ html {
   width: min(300px, 100vw) !important;
 }
 .top-act__dropdown-arrow {
-  right: 15px;
+  right: 15px !important;
 }
 .top-act__avatar {
   display: block;
