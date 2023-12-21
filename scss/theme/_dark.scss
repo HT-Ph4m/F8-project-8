@@ -96,11 +96,12 @@ html.dark {
     --tex-content-hr-color: rgba(172, 172, 172, 0.5);
 
     // --act-dropdown
-    --act-dropdown-bg: #292e39;
+    --act-dropdown-bg: #2f3441;
     --act-dropdown-shadow: rgba(23, 28, 40, 0.4);
     --act-dropdown-color: #b9babe;
     --act-dropdown-border-color: #171c28;
-    --act-dropdown-arrow-color: var(--act-dropdown-bg);
+    --act-dropdown-arrow-color: brightness(0) saturate(100%) invert(18%) sepia(22%) saturate(485%) hue-rotate(185deg)
+        brightness(95%) contrast(93%);
 
     // checkout page
     --checkout-page-color: #b9babe;
